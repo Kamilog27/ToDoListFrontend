@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="homework" *ngFor="let homework of homeworkService.homeworks">
+                <h4 class="col-md-10">{{homework.name}}</h4>
+                <button class="col-md-1" (click)="editHomework(homework)">
+                    <i class="fas fa-pen-square pen"></i>
+                </button>
+                <button (click)="deleteHomework(homework._id!)">
+                    <i class="fas fa-trash-alt trash"></i>
+                </button>
+            </div>
+            <div class="addhomework">
+                <form #homeworkForm="ngForm" (ngSubmit)="addHomework(homeworkForm)"> 
+                    <input type="hidden" name="_id" [(ngModel)]="homeworkService.selectedHomework._id">
+                    <input type="text" name="name" [(ngModel)]="homeworkService.selectedHomework.name" placeholder="Ingresa tu tarea - nombre">
+                    <button>Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

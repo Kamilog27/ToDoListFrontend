@@ -1,0 +1,38 @@
+
+.homework{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(96, 96, 245);
+    border-radius: 20px;
+    min-width:200px;
+    margin:10px;
+    padding: 10px;
+}
+h4{
+    color: white;
+}
+.trash{
+    color:red;
+    background: transparent;
+}
+.pen{
+    color:yellow;
+    background: transparent;
+}
+button{
+    background: transparent;
+    border:none;
+}
+i{
+    font-size: 30px;
+}
+.addhomework{
+    display: flex;
+    justify-content: center;
+}
+form>button{
+    background: rgb(63, 63, 241);
+    color: white;
+    height: 30px;
+}
